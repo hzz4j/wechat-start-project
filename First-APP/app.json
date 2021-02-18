@@ -1,7 +1,9 @@
 {
+  "entryPagePath": "pages/posts/posts",
   "pages": [
     "pages/welcome/welcome",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/posts/posts"
   ],
   "window": {
     "navigationBarBackgroundColor": "#b3d4db",
