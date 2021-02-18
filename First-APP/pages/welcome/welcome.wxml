@@ -2,7 +2,7 @@
 <view class="container">
   <image src="/images/avatar/5.png" class="user-avatar"/>
   <text class="user-name"> Q10Viking</text>
-  <view class="moto-container">
+  <view class="moto-container" bind:tap="onTapFunc">
     <text class="moto">Wechat MINI APP START : )</text>
   </view>
 </view>
