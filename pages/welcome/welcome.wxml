@@ -1,0 +1,9 @@
+<!--view 相当于div-->
+<view>
+  <image src="/imgages/4.png"></image>
+  <text>Hello Q10Viking</text>
+  <view>
+    <text>Wechat MINI APP START :)</text>
+  </view>
+</view>
+
