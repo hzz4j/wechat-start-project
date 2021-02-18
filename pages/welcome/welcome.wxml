@@ -2,8 +2,8 @@
 <view class="container">
   <image src="/images/5.png" class="user-avatar"/>
   <text class="user-name"> Q10Viking</text>
-  <view>
-    <text>Wechat MINI APP START :)</text>
+  <view class="moto-container">
+    <text class="moto">Wechat MINI APP START : )</text>
   </view>
 </view>
 

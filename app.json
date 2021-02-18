@@ -1,5 +1,14 @@
 {
   "pages": [
-    "pages/welcome/welcome"
-  ]
+    "pages/welcome/welcome",
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#b3d4db",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Q10Viking",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  }
 }
