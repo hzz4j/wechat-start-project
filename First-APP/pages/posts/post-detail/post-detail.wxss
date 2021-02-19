@@ -47,7 +47,7 @@
   margin-top: 20rpx;
   letter-spacing: 2rpx;
 }
-
+/* 父容器 */
 .tool{
   display: flex;
   flex-direction: column;
@@ -65,13 +65,25 @@
 .circle-image{
   width: 90rpx;
   height: 90rpx;
-  margin-right: 20rpx;
+  margin-left: 30rpx;
 }
 
+/* 子元素的在父容器中的居中 */
 .horizon{
   width: 660rpx;
   height: 1rpx;
   background-color: #e5e5e5;
+  /* 绝对定位 */
   position: absolute;
   z-index: -99;
+}
+
+.detail{
+  color: #666;
+  font-size: 28rpx;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+  line-height: 44rpx;
+  letter-spacing: 2rpx;
 }
