@@ -16,7 +16,7 @@
   <!-- 文章 -->
   <block wx:key="postId" wx:for="{{posts}}" wx:for-item="post" wx:for-index="idx">
     <!-- <template is="post-item" data="{{post}}"></template> -->
-    <view class="post-container" bind:tap="onJumpToDetail">
+    <view class="post-container" bind:tap="onJumpToDetail" data-post-id="{{post.postId}}">
       <view class="post-author-date">
         <image src="{{post.avatar}}" class="post-author"></image>
         <text class="post-date">{{post.date}}</text>

@@ -1,12 +1,12 @@
 <view class="container">
-  <image class="head-image" src="/images/bestplayers.png"></image>
+  <image class="head-image" src="{{post.headImgSrc}}"></image>
   <view class="author-date">
-    <image class="avatar" src="/images/avatar/1.png"></image>
-    <text class="author">Q10Viking</text>
+    <image class="avatar" src="{{post.avatar}}"></image>
+    <text class="author">{{post.author}}</text>
     <text class="const-text">发表于</text>
-    <text class="date">24小时前</text>
+    <text class="date">{{post.dateTime}}</text>
   </view>
-  <text class="title">学习Wechat小程序</text>
+  <text class="title">{{post.title}}</text>
   <view class="tool">
     <view class="circle">
       <image class="circle-image" src="/images/icon/collection.png"></image>
@@ -15,5 +15,5 @@
    
     <view class="horizon"></view>
   </view>
-  <text class="detail">8月9号，LPL常规赛收官之战结束，在事关季后赛轮次的比赛中关键对局中，SN战胜了FPX，为本赛季常规赛画上句号。进入季后赛的战队依次为，TES、JDG、IG、SN、</text>
+  <text class="detail">{{post.detail}}</text>
 </view>
