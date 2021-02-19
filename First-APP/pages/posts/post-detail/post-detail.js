@@ -22,8 +22,14 @@ Page({
 
     //  查找出对应id的文章
     let post = postList.find(post => post.postId == postId)
+
+
+    //  从缓存中寻找该文章是否被收藏
+    const postsCollected = wx.getStorageSync('posts_collected');
+    const collected = postsCollected[this.data._pid];
     this.setData({
-      post
+      post,
+      collected
     })
   },
 
