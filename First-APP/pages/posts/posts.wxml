@@ -1,3 +1,5 @@
+<import src="post-item/post-item.wxml"/>
+
 <view>
   <swiper indicator-dots="true" autoplay="true" interval="3000">
     <swiper-item>
@@ -13,21 +15,7 @@
 
   <!-- 文章 -->
   <block wx:for="{{posts}}" wx:for-item="post" wx:for-index="idx">
-    <view class="post-container">
-      <view class="post-author-date">
-        <image src="{{post.avatar}}" class="post-author"></image>
-        <text class="post-date">{{post.date}}</text>
-      </view>
-      <text class="post-title">{{post.title}}</text>
-      <image class="post-image" src="{{post.imgSrc}}"></image>
-      <text class="post-content">{{post.content}}</text>
-      <view class="post-like">
-        <image class="post-like-image" src="/images/icon/chat.png"></image>
-        <text class="post-like-font">{{post.reading}}</text>
-        <image class="post-like-image" src="/images/icon/view.png"></image>
-        <text class="post-like-font">{{post.collection}}</text>
-      </view>
-    </view>
+    <template is="post-item" data="{{post}}"></template>
   </block>
   
 </view>
