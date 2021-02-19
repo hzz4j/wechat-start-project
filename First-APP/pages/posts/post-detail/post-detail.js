@@ -1,5 +1,5 @@
 import {local_database as postList} from "../../../data/post-data";
-
+const app = getApp();
 Page({
 
   /**
@@ -35,7 +35,8 @@ Page({
     const collected = postsCollected[this.data._pid];
     this.setData({
       post,
-      collected
+      collected,
+      isPlaying: app.gPlayingMusic
     })
 
     const mgr = wx.getBackgroundAudioManager();
@@ -141,6 +142,9 @@ Page({
     this.setData({
       isPlaying: true
     })
+
+    //  设置全局变量为播放
+    app.gPlayingMusic = true;
   },
   /**
    * 暂停音乐
@@ -151,5 +155,7 @@ Page({
     this.setData({
       isPlaying: false
     })
+
+    app.gPlayingMusic = false;
   }
 })
