@@ -6,7 +6,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    post:{}
+    post:{},
+    collected: false,
+    _pid: null
   },
 
   /**
@@ -15,6 +17,10 @@ Page({
   onLoad: function (options) {
     console.log(options)  //  {pid: "3"}
     const postId = options.pid;
+
+    this.data._pid = postId;
+
+    //  查找出对应id的文章
     let post = postList.find(post => post.postId == postId)
     this.setData({
       post
@@ -68,5 +74,19 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+
+  /**
+   * 收藏文章
+   */
+  onCollect(){
+    //  收藏哪篇文章
+    //  数据结构 多篇文章被收藏{id: true | false}
+    const postCollected = {}
+    postCollected[this.data._pid] = true
+    this.setData({
+      collected: true
+    })
+    wx.setStorageSync('posts_collected',postCollected);
   }
 })
