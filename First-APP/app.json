@@ -17,5 +17,6 @@
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
     "l-icon": "/miniprogram_npm/lin-ui/icon/index"
-  }
+  },
+  "requiredBackgroundModes": ["audio", "location"]
 }

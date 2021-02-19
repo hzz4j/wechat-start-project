@@ -8,6 +8,7 @@ Page({
   data: {
     post:{},
     collected: false,
+    isPlaying: false,
     _pid: null,
     _posts_collected:{}
   },
@@ -115,6 +116,33 @@ Page({
   onShare(event){
     wx.showActionSheet({
       itemList: ["分享到QQ","分享到微信"],
+    })
+  },
+  /**
+   * 音乐播放
+   */
+  onMusicStart(){
+    const music = this.data.post.music;
+    const manager = wx.getBackgroundAudioManager();
+    //  音乐链接
+    manager.src = music.url;
+    //  音乐标题
+    manager.title = music.title;
+    //  音乐图片
+    manager.coverImgUrl = music.coverImg
+
+    this.setData({
+      isPlaying: true
+    })
+  },
+  /**
+   * 停止音乐
+   */
+  onMusicStop(){
+    const manager = wx.getBackgroundAudioManager();
+    manager.stop();
+    this.setData({
+      isPlaying: false
     })
   }
 })
