@@ -38,3 +38,40 @@
   margin-left: 30rpx;
   color: #999;
 }
+
+.title{
+  font-size: 36rpx;
+  font-weight: 700;
+  color:  #4b556c;
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+  letter-spacing: 2rpx;
+}
+
+.tool{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 660rpx;
+}
+
+.circle-image{
+  width: 90rpx;
+  height: 90rpx;
+  margin-right: 20rpx;
+}
+
+.horizon{
+  width: 660rpx;
+  height: 1rpx;
+  background-color: #e5e5e5;
+  position: absolute;
+  z-index: -99;
+}
