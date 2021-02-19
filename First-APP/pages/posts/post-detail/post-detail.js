@@ -8,7 +8,8 @@ Page({
   data: {
     post:{},
     collected: false,
-    _pid: null
+    _pid: null,
+    _posts_collected:{}
   },
 
   /**
@@ -26,6 +27,9 @@ Page({
 
     //  从缓存中寻找该文章是否被收藏
     const postsCollected = wx.getStorageSync('posts_collected');
+    if(postsCollected){
+      this.data._posts_collected = postsCollected;
+    }
     const collected = postsCollected[this.data._pid];
     this.setData({
       post,
@@ -88,11 +92,29 @@ Page({
   onCollect(){
     //  收藏哪篇文章
     //  数据结构 多篇文章被收藏{id: true | false}
-    const postCollected = {}
-    postCollected[this.data._pid] = true
+    const key = "posts_collected";
+    let postCollected = this.data._posts_collected
+    const collected = !this.data.collected;
+
+    postCollected[this.data._pid] = collected
     this.setData({
-      collected: true
+      collected
     })
-    wx.setStorageSync('posts_collected',postCollected);
+    wx.setStorageSync(key,postCollected);
+
+    let msg = collected ? "收藏成功":"取消收藏";
+    wx.showToast({
+      title: msg,
+      duration: 2000  //  显示时间
+    })
+  },
+
+  /**
+   * 分享
+   */
+  onShare(event){
+    wx.showActionSheet({
+      itemList: ["分享到QQ","分享到微信"],
+    })
   }
 })
