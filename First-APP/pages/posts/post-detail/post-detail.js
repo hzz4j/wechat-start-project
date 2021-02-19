@@ -10,7 +10,8 @@ Page({
     collected: false,
     isPlaying: false,
     _pid: null,
-    _posts_collected:{}
+    _posts_collected:{},
+    _mgr: null
   },
 
   /**
@@ -36,6 +37,12 @@ Page({
       post,
       collected
     })
+
+    const mgr = wx.getBackgroundAudioManager();
+    //  data作为中转站
+    this.data._mgr = mgr;
+    mgr.onPlay(this.onMusicStart);
+    mgr.onPause(this.onMusicPause);
   },
 
   /**
@@ -123,7 +130,7 @@ Page({
    */
   onMusicStart(){
     const music = this.data.post.music;
-    const manager = wx.getBackgroundAudioManager();
+    const manager = this.data._mgr;
     //  音乐链接
     manager.src = music.url;
     //  音乐标题
@@ -136,10 +143,10 @@ Page({
     })
   },
   /**
-   * 停止音乐
+   * 暂停音乐
    */
-  onMusicStop(){
-    const manager = wx.getBackgroundAudioManager();
+  onMusicPause(){
+    const manager = this.data._mgr;
     manager.stop();
     this.setData({
       isPlaying: false
