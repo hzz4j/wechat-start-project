@@ -1,5 +1,4 @@
-// let posts_data = require("../../data/post-data");
-import {local_database} from "../../data/post-data"
+// pages/posts/post-detail.js
 Page({
 
   /**
@@ -13,7 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      this.setData({posts:local_database})
+
   },
 
   /**
@@ -63,14 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  /**
-   * 跳转到详情页面
-   */
-  onJumpToDetail(){
-    wx.navigateTo({
-      url: './post-detail/post-detail',
-    })
   }
 })

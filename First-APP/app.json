@@ -3,7 +3,8 @@
   "pages": [
     "pages/welcome/welcome",
     "pages/index/index",
-    "pages/posts/posts"
+    "pages/posts/posts",
+    "pages/posts/post-detail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#b3d4db",
@@ -13,5 +14,8 @@
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "l-icon": "/miniprogram_npm/lin-ui/icon/index"
+  }
 }

@@ -1,7 +1,7 @@
 <import src="post-item/post-item.wxml"/>
 
 <view>
-  <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="3000">
+  <swiper circular indicator-dots="{{true}}" autoplay="{{true}}" interval="3000">
     <swiper-item>
       <image src="/images/bestplayers.png" ></image>
     </swiper-item>
@@ -14,8 +14,25 @@
   </swiper>
 
   <!-- 文章 -->
-  <block wx:for="{{posts}}" wx:for-item="post" wx:for-index="idx">
-    <template is="post-item" data="{{post}}"></template>
+  <block wx:key="postId" wx:for="{{posts}}" wx:for-item="post" wx:for-index="idx">
+    <!-- <template is="post-item" data="{{post}}"></template> -->
+    <view class="post-container" bind:tap="onJumpToDetail">
+      <view class="post-author-date">
+        <image src="{{post.avatar}}" class="post-author"></image>
+        <text class="post-date">{{post.date}}</text>
+      </view>
+      <text class="post-title">{{post.title}}</text>
+      <image class="post-image" src="{{post.imgSrc}}"></image>
+      <text class="post-content">{{post.content}}</text>
+      <view class="post-like">
+        <!-- <image class="post-like-image" src="/images/icon/chat.png"></image> -->
+        <l-icon style="margin-top: 5rpx;" class="post-like-image" size="28" name="favor"/>
+        <text class="post-like-font">{{post.reading}}</text>
+        <!-- <image class="post-like-image" src="/images/icon/view.png"></image> -->
+        <l-icon  class="post-like-image" size="32" name="eye"/>
+        <text class="post-like-font">{{post.collection}}</text>
+      </view>
+    </view>
   </block>
   
 </view>

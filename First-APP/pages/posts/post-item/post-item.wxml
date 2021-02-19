@@ -8,9 +8,11 @@
       <image class="post-image" src="{{post.imgSrc}}"></image>
       <text class="post-content">{{post.content}}</text>
       <view class="post-like">
-        <image class="post-like-image" src="/images/icon/chat.png"></image>
+        <!-- <image class="post-like-image" src="/images/icon/chat.png"></image> -->
+        <l-icon style="margin-top: 5rpx;" class="post-like-image" size="28" name="favor"/>
         <text class="post-like-font">{{post.reading}}</text>
-        <image class="post-like-image" src="/images/icon/view.png"></image>
+        <!-- <image class="post-like-image" src="/images/icon/view.png"></image> -->
+        <l-icon  class="post-like-image" size="32" name="eye"/>
         <text class="post-like-font">{{post.collection}}</text>
       </view>
     </view>
