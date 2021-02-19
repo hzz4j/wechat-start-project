@@ -1,10 +1,10 @@
 <view class="container">
-  <image src="/images/bestplayers.png"></image>
-  <view>
-    <image src="/images/avatar/1.png"></image>
-    <text>Q10Viking</text>
-    <text>发表于</text>
-    <text>24小时前</text>
+  <image class="head-image" src="/images/bestplayers.png"></image>
+  <view class="author-date">
+    <image class="avatar" src="/images/avatar/1.png"></image>
+    <text class="author">Q10Viking</text>
+    <text class="const-text">发表于</text>
+    <text class="date">24小时前</text>
   </view>
   <text class="title">学习Wechat小程序</text>
   <view>
