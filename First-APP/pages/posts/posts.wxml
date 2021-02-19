@@ -1,15 +1,15 @@
 <import src="post-item/post-item.wxml"/>
 
 <view>
-  <swiper indicator-dots="true" autoplay="true" interval="3000">
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="3000">
     <swiper-item>
-      <image src="/images/wx.png" ></image>
+      <image src="/images/bestplayers.png" ></image>
     </swiper-item>
     <swiper-item>
-      <image src="/images/iqiyi.png"></image>
+      <image src="/images/lpl.png"></image>
     </swiper-item>
     <swiper-item>
-      <image src="/images/vr.png"></image>
+      <image src="/images/jumpfly.png"></image>
     </swiper-item>
   </swiper>
 
