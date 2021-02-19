@@ -1,4 +1,5 @@
 App({
 
-  gPlayingMusic: false
+  gPlayingMusic: false,
+  gPlayingMusicPostId: -1
 })

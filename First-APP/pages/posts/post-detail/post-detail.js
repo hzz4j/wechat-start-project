@@ -36,7 +36,7 @@ Page({
     this.setData({
       post,
       collected,
-      isPlaying: app.gPlayingMusic
+      isPlaying: this.currentMusicPlaying()
     })
 
     const mgr = wx.getBackgroundAudioManager();
@@ -145,6 +145,7 @@ Page({
 
     //  设置全局变量为播放
     app.gPlayingMusic = true;
+    app.gPlayingMusicPostId = this.data._pid;
   },
   /**
    * 暂停音乐
@@ -157,5 +158,9 @@ Page({
     })
 
     app.gPlayingMusic = false;
+    app.gPlayingMusicPostId = -1;
+  },
+  currentMusicPlaying(){
+    return app.gPlayingMusic && app.gPlayingMusicPostId == this.data._pid;
   }
 })
