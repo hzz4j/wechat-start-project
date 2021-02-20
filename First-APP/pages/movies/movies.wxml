@@ -1,3 +1,4 @@
-<movie-list>
+<movie-list f-class="movie-list"/>
+<movie-list f-class="movie-list"/>
+<movie-list />
   
-</movie-list>
