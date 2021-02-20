@@ -35,6 +35,12 @@
           "pathName": "pages/more-movie/more-movie",
           "query": "pid=2",
           "scene": null
+        },
+        {
+          "name": "pages/movie-detail/movie-detail",
+          "pathName": "pages/movie-detail/movie-detail",
+          "query": "mid=305",
+          "scene": null
         }
       ]
     }

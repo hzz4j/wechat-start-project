@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    movie:{}
   },
 
   /**
@@ -17,6 +17,9 @@ Page({
       url: `${app.gBaseUrl}/subject/${mid}`,
       success: res => {
         console.log(res.data)
+        this.setData({
+          movie: res.data
+        })
       }
     })
   },
