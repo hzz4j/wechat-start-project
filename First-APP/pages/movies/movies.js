@@ -102,5 +102,17 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /**
+   * 搜索
+   */
+  onConfirm(event){
+    const q = event.detail.value;
+    wx.request({
+      url: `${app.gBaseUrl}/search`,
+      data:{
+        q
+      }
+    })
   }
 })
