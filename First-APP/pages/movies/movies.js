@@ -48,7 +48,6 @@ Page({
         count: 3
       },
       success: res => {
-        console.log(res)
         this.setData({
           top250:res.data.subjects
         })
