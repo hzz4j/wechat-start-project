@@ -48,9 +48,19 @@
 
 
 <view class="casts">
-  <text>影人</text>
+  <text class="cast-font">影人</text>
   <view class="casts-container">
     <block wx:for="{{movie.castsInfo}}" wx:key="index" wx:for-item="cast">
+      <view class="cast-container">
+        <image class="cast-img" src="{{cast.img}}"></image>
+        <text class="cast-name">{{cast.name}}</text>
+      </view>
+
+      <view class="cast-container">
+        <image class="cast-img" src="{{cast.img}}"></image>
+        <text>{{cast.name}}</text>
+      </view>
+
       <view class="cast-container">
         <image class="cast-img" src="{{cast.img}}"></image>
         <text>{{cast.name}}</text>
