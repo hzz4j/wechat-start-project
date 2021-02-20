@@ -11,7 +11,6 @@
   "window": {
     "navigationBarBackgroundColor": "#c22A1E",
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "Q10Viking",
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false

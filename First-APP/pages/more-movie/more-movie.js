@@ -6,7 +6,12 @@ Page({
    */
   data: {
     movies:[],
-    _type: null
+    _type: null,
+    _navigationTitle: {
+      "in_theaters": "正在热映",
+      "coming_soon": "即将上映",
+      "top250": "豆瓣Top250"
+    }
   },
 
   /**
@@ -33,7 +38,10 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+      const title = this.data._navigationTitle[this.data._type];
+      wx.setNavigationBarTitle({
+        title
+      })
   },
 
   /**
@@ -61,7 +69,20 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+      wx.request({
+        url: `${app.gBaseUrl}/${this.data._type}`,
+        data: {
+          start: 0,
+          count: 12
+        },
+        success:res => {
+          this.setData({
+            movies: res.data.subjects
+          })
 
+          wx.stopPullDownRefresh();
+        }
+      })
   },
 
   /**
