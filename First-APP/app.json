@@ -16,14 +16,21 @@
     "enablePullDownRefresh": false
   },
   "tabBar": {
+    "selectedColor": "#333333",
+    "color": "#999999",
+    "borderStyle": "white",
     "list":[
       {
         "text":"阅读",
-        "pagePath": "pages/posts/posts"
+        "pagePath": "pages/posts/posts",
+        "iconPath": "/images/tab/post.png",
+        "selectedIconPath": "/images/tab/post@highlight.png"
       },
       {
         "text":"电影",
-        "pagePath": "pages/movies/movies"
+        "pagePath": "pages/movies/movies",
+        "iconPath": "/images/tab/movie.png",
+        "selectedIconPath": "/images/tab/movie@highlight.png"
       }
     ]
   },
