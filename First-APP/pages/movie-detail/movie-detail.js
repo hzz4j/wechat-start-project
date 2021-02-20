@@ -1,4 +1,4 @@
-import {convertToCastString} from '../../utils/movie-util'
+import {convertToCastString,convertToCastInfos} from '../../utils/movie-util'
 const app = getApp();
 Page({
 
@@ -19,16 +19,17 @@ Page({
       success: res => {
         console.log(res.data)
         this.processMovieData(res.data)
-        
       }
     })
   },
   processMovieData(movie){
     const result = movie;
     result.directors = convertToCastString(movie.directors);
+    result.castInfo = convertToCastInfos(movie.casts);
     result.casts = convertToCastString(movie.casts);
     result.genres = movie.genres.join("、");
     result.rating.stars = Number(movie.rating.stars)/10;
+    
     
     this.setData({
       movie: result

@@ -38,3 +38,10 @@
 </view>
 
 <view class="hr"></view>
+
+<view class="synopsis">
+  <text class="synopsis-font">剧情简介</text>
+  <text class="synopsis-content">{{movie.summary}}</text>
+</view>
+
+<view class="hr"></view>
