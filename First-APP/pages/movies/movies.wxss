@@ -5,3 +5,7 @@
 page{
   background-color: #f8f7f7;
 }
+
+.ex-search-bar{
+  height: 90rpx !important;
+}
