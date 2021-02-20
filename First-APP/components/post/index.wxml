@@ -1,1 +1,17 @@
-自定义组件{{text}}
+<view class="post-container" bind:tap="onJumpToDetail" data-post-id="{{res.postId}}">
+  <view class="post-author-date">
+    <image src="{{res.avatar}}" class="post-author"></image>
+    <text class="post-date">{{res.date}}</text>
+  </view>
+  <text class="post-title">{{res.title}}</text>
+  <image class="post-image" src="{{res.imgSrc}}"></image>
+  <text class="post-content">{{res.content}}</text>
+  <view class="post-like">
+    <!-- <image class="post-like-image" src="/images/icon/chat.png"></image> -->
+    <l-icon style="margin-top: 5rpx;" class="post-like-image" size="28" name="favor" />
+    <text class="post-like-font">{{res.reading}}</text>
+    <!-- <image class="post-like-image" src="/images/icon/view.png"></image> -->
+    <l-icon class="post-like-image" size="32" name="eye" />
+    <text class="post-like-font">{{res.collection}}</text>
+  </view>
+</view>
