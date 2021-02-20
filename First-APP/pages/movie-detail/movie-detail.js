@@ -1,5 +1,4 @@
-// let posts_data = require("../../data/post-data");
-import {local_database} from "../../data/post-data"
+const app = getApp();
 Page({
 
   /**
@@ -13,7 +12,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      this.setData({posts:local_database})
+    const mid = options.mid;
+    wx.request({
+      url: `${app.gBaseUrl}/subject/${mid}`,
+      success: res => {
+        console.log(res.data)
+      }
+    })
   },
 
   /**
@@ -63,24 +68,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  
-    /**
-     * 跳转到详情页面
-     */
-    onJumpToDetail(event){
-      console.log(event)
-      wx.navigateTo({
-        url: `./post-detail/post-detail?pid=${event.detail.pid}`,
-      })
-     
-    },
-    /**
-     * 页面滑块跳转到详情页面
-     */
-    onHeaderJumpToDetail(event){
-      wx.navigateTo({
-        url: `./post-detail/post-detail?pid=${event.currentTarget.dataset.postId}`,
-      })
-    }
+  }
 })
