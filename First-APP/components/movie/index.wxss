@@ -14,5 +14,17 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-top: 20rpx;
+}
 
+.rate-container{
+  margin-top: 6rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.score{
+  margin-left: 20rpx;
+  font-size: 24rpx;
 }

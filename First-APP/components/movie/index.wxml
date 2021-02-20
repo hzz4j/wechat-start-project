@@ -1,4 +1,9 @@
 <view class="container">
   <image class="poster" src="/images/lpl.png"></image>
   <text class="title">你好李焕英 你好李焕英</text>
+  <view class="rate-container">
+    <l-rate score="2.5" size="22" disabled="{{true}}" />
+    <text class="score">2.5</text>
+  </view>
+
 </view>
