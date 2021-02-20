@@ -1,3 +1,4 @@
+import {convertToCastString} from '../../utils/movie-util'
 const app = getApp();
 Page({
 
@@ -17,13 +18,22 @@ Page({
       url: `${app.gBaseUrl}/subject/${mid}`,
       success: res => {
         console.log(res.data)
-        this.setData({
-          movie: res.data
-        })
+        this.processMovieData(res.data)
+        
       }
     })
   },
-
+  processMovieData(movie){
+    const result = movie;
+    result.directors = convertToCastString(movie.directors);
+    result.casts = convertToCastString(movie.casts);
+    result.genres = movie.genres.join("、");
+    result.rating.stars = Number(movie.rating.stars)/10;
+    
+    this.setData({
+      movie: result
+    })
+  },
   onViewPost(event){
     wx.previewImage({
       urls: [this.data.movie.images.large]

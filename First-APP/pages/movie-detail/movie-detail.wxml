@@ -12,3 +12,29 @@
     <image class="movie-img" bind:tap="onViewPost" src="{{movie.images.large}}"></image>
   </view>
 </view>
+
+<view class="summary">
+  <view class="original-title">
+    <text >{{movie.original_title}}</text>
+  </view>
+
+  <view class="flex-row">
+    <text class="mark">评分</text>
+    <l-rate disabled="{{true}}" size="22" score="{{movie.rating.stars}}" />
+    <text class="score">{{movie.rating.average}}</text>
+  </view>
+  <view class="flex-row">
+    <text class="mark">导演</text>
+    <text>{{movie.directors}}</text>
+  </view>
+  <view class="flex-row">
+    <text class="mark">影人</text>
+    <text>{{movie.casts}}</text>
+  </view>
+  <view class="flex-row">
+    <text class="mark">类型</text>
+    <text>{{movie.genres}}</text>
+  </view>
+</view>
+
+<view class="hr"></view>
