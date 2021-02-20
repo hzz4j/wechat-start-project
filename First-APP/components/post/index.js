@@ -20,7 +20,10 @@ Component({
   methods: {
 
     onTap(event){
-      this.triggerEvent("post")
+      const pid = event.currentTarget.dataset.postId;
+      this.triggerEvent("post",{
+        pid
+      })
     }
   },
 

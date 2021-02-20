@@ -69,8 +69,15 @@ Page({
      * 跳转到详情页面
      */
     onJumpToDetail(event){
-      console.log("1111111")
-      console.log(event.currentTarget.dataset.postId);
+      console.log(event)
+      wx.navigateTo({
+        url: `./post-detail/post-detail?pid=${event.detail.pid}`,
+      })
+    },
+    /**
+     * 页面滑块跳转到详情页面
+     */
+    onHeaderJumpToDetail(event){
       wx.navigateTo({
         url: `./post-detail/post-detail?pid=${event.currentTarget.dataset.postId}`,
       })
