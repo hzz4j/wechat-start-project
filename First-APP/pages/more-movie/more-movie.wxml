@@ -1,3 +1,5 @@
-<block wx:for="{{movies}}" wx:for-item="movie" wx:key="id">
-  <movie movie="{{movie}}" />
-</block>
+<view class="container">
+  <block wx:for="{{movies}}" wx:for-item="movie" wx:key="id">
+    <movie class="movie" movie="{{movie}}" />
+  </block>
+</view>
