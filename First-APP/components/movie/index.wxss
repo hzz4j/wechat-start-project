@@ -1,1 +1,18 @@
-/* components/movie/index.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 200rpx;
+}
+
+.poster{
+  width: 100%;
+  height: 270rpx;
+  margin-top: 20rpx;
+}
+
+.title{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
