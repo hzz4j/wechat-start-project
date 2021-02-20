@@ -111,3 +111,24 @@
   line-height: 40rpx;
   letter-spacing: 2rpx;
 }
+
+.casts{
+  display: flex;
+  flex-direction: column;
+}
+
+.cast-img{
+  width: 170rpx;
+  height: 210rpx;
+}
+
+.casts-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.cast-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

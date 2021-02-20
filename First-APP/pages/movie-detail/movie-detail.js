@@ -25,7 +25,7 @@ Page({
   processMovieData(movie){
     const result = movie;
     result.directors = convertToCastString(movie.directors);
-    result.castInfo = convertToCastInfos(movie.casts);
+    result.castsInfo = convertToCastInfos(movie.casts);
     result.casts = convertToCastString(movie.casts);
     result.genres = movie.genres.join("、");
     result.rating.stars = Number(movie.rating.stars)/10;
