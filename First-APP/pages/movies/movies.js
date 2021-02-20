@@ -7,7 +7,8 @@ Page({
   data: {
       inTheaters: [],
       comingSoon:[],
-      top250:[]
+      top250:[],
+      searchResult: false
   },
 
   /**
@@ -107,11 +108,19 @@ Page({
    * 搜索
    */
   onConfirm(event){
+
+    this.setData({
+      searchResult: true
+    })
+
     const q = event.detail.value;
     wx.request({
       url: `${app.gBaseUrl}/search`,
       data:{
         q
+      },
+      success: res => {
+
       }
     })
   }
