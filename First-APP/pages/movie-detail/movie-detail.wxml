@@ -1,14 +1,14 @@
-<view>
+<view class="container">
   <image class="header-img" src="{{movie.images.large}}"></image>
-  <view>
+  <view class="head-img-hover">
     <text class="main-title">{{movie.original_title}}</text>
-    <text class="sub-title">{{movie.countries[0]}}</text>
-    <view>
+    <text class="sub-title">{{movie.countries[0]}}·{{movie.year}}</text>
+    <view class="like">
       <text class="highlight-font">{{movie.wish_count}}</text>
       <text class="plain-font">人喜欢</text>
       <text class="highlight-font">{{movie.comments_count}}</text>
       <text class="plain-font">条评论</text>
     </view>
-    <image class="movie-img" src="{{movie.images.large}}"></image>
+    <image class="movie-img" bind:tap="onViewPost" src="{{movie.images.large}}"></image>
   </view>
 </view>
