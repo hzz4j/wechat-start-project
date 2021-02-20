@@ -126,5 +126,14 @@ Page({
         })
       }
     })
+  },
+  /**
+   * 取消搜索
+   */
+  onCancelSearch(event){
+    this.setData({
+      searchResult: false,
+      searchMovies:[]
+    })
   }
 })

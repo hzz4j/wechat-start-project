@@ -18,6 +18,11 @@ page{
   padding: 30rpx 28rpx;
 }
 
+.search-container::after{
+  content: "";
+  width: 200rpx;
+}
+
 .movie{
   margin-bottom: 32rpx;
 }

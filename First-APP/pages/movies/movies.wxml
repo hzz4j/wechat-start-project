@@ -1,4 +1,4 @@
-<l-search-bar bind:linconfirm="onConfirm" l-class="ex-search-bar" placeholder="盗梦空间" />
+<l-search-bar bind:linconfirm="onConfirm" bind:lincancel="onCancelSearch" l-class="ex-search-bar" placeholder="盗梦空间" />
 
 <view wx:if="{{!searchResult}}">
   <movie-list title="正在热映" f-class="movie-list" movies="{{inTheaters}}" type="in_theaters" />
