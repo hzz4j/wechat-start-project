@@ -1,0 +1,3 @@
+<block wx:for="{{movies}}" wx:for-item="movie" wx:key="id">
+  <movie movie="{{movie}}" />
+</block>
