@@ -63,5 +63,16 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  
+    /**
+     * 跳转到详情页面
+     */
+    onJumpToDetail(event){
+      console.log("1111111")
+      console.log(event.currentTarget.dataset.postId);
+      wx.navigateTo({
+        url: `./post-detail/post-detail?pid=${event.currentTarget.dataset.postId}`,
+      })
+    }
 })

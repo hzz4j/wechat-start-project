@@ -18,14 +18,9 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    /**
-     * 跳转到详情页面
-     */
-    onJumpToDetail(event){
-      console.log(event.currentTarget.dataset.postId);
-      wx.navigateTo({
-        url: `./post-detail/post-detail?pid=${event.currentTarget.dataset.postId}`,
-      })
+
+    onTap(event){
+      this.triggerEvent("post")
     }
   },
 

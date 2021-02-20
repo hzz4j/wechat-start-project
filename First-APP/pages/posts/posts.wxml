@@ -16,7 +16,7 @@
   <!-- 文章 -->
   <block wx:key="postId" wx:for="{{posts}}" wx:for-item="post" wx:for-index="idx">
     <!-- <template is="post-item" data="{{post}}"></template> -->
-    <post res="{{post}}" />
+    <post res="{{post}}" bind:post="onJumpToDetail"/>
   </block>
   
 </view>
