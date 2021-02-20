@@ -1,4 +1,4 @@
-<movie-list f-class="movie-list"/>
-<movie-list f-class="movie-list"/>
-<movie-list />
+<movie-list title="正在热映" f-class="movie-list"/>
+<movie-list title="即将上映" f-class="movie-list"/>
+<movie-list title="豆瓣Top250"/>
   
