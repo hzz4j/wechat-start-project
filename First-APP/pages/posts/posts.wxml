@@ -3,13 +3,13 @@
 <view>
   <swiper circular indicator-dots="{{true}}" autoplay="{{true}}" interval="3000">
     <swiper-item>
-      <image src="/images/bestplayers.png" ></image>
+      <image bind:tap="onJumpToDetail" data-post-id="3" src="/images/bestplayers.png" ></image>
     </swiper-item>
     <swiper-item>
-      <image src="/images/lpl.png"></image>
+      <image bind:tap="onJumpToDetail" data-post-id="0" src="/images/lpl.png"></image>
     </swiper-item>
     <swiper-item>
-      <image src="/images/jumpfly.png"></image>
+      <image bind:tap="onJumpToDetail" data-post-id="4" src="/images/jumpfly.png"></image>
     </swiper-item>
   </swiper>
 
