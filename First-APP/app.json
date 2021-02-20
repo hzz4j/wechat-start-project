@@ -4,7 +4,8 @@
     "pages/welcome/welcome",
     "pages/index/index",
     "pages/posts/posts",
-    "pages/posts/post-detail/post-detail"
+    "pages/posts/post-detail/post-detail",
+    "pages/movies/movies"
   ],
   "window": {
     "navigationBarBackgroundColor": "#b3d4db",
@@ -14,9 +15,22 @@
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false
   },
+  "tabBar": {
+    "list":[
+      {
+        "text":"阅读",
+        "pagePath": "pages/posts/posts"
+      },
+      {
+        "text":"电影",
+        "pagePath": "pages/movies/movies"
+      }
+    ]
+  },
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
     "l-icon": "/miniprogram_npm/lin-ui/icon/index"
   },
   "requiredBackgroundModes": ["audio", "location"]
+  
 }
