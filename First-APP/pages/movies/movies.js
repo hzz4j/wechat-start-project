@@ -8,7 +8,8 @@ Page({
       inTheaters: [],
       comingSoon:[],
       top250:[],
-      searchResult: false
+      searchResult: false,
+      searchMovies:[]
   },
 
   /**
@@ -120,7 +121,9 @@ Page({
         q
       },
       success: res => {
-
+        this.setData({
+          searchMovies: res.data.subjects
+        })
       }
     })
   }

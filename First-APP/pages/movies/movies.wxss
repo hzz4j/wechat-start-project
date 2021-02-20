@@ -9,3 +9,15 @@ page{
 .ex-search-bar{
   height: 90rpx !important;
 }
+
+.search-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30rpx 28rpx;
+}
+
+.movie{
+  margin-bottom: 32rpx;
+}
