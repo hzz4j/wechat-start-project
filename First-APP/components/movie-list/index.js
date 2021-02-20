@@ -10,7 +10,8 @@ Component({
    */
   properties: {
     title:String,
-    movies: Array
+    movies: Array,
+    type: String
   },
 
   /**
@@ -24,6 +25,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    onJumpToMoreMovie(event){
+      console.log(this.properties.type)
+      wx.navigateTo({
+        url: `/pages/more-movie/more-movie?type=${this.properties.type}`,
+      })
+    }
   }
 })

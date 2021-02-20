@@ -1,4 +1,4 @@
-<movie-list title="正在热映" f-class="movie-list" movies="{{inTheaters}}"/>
-<movie-list title="即将上映" f-class="movie-list" movies="{{comingSoon}}"/>
-<movie-list title="豆瓣Top250" movies="{{top250}}"/>
+<movie-list title="正在热映" f-class="movie-list" movies="{{inTheaters}}" type="in_theaters"/>
+<movie-list title="即将上映" f-class="movie-list" movies="{{comingSoon}}" type="coming_soon"/>
+<movie-list title="豆瓣Top250" movies="{{top250}}" type="top250"/>
   
