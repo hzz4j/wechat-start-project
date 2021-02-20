@@ -1,9 +1,9 @@
 <view class="container">
-  <image class="poster" src="/images/lpl.png"></image>
-  <text class="title">你好李焕英 你好李焕英</text>
+  <image class="poster" src="{{movie.images.large}}"></image>
+  <text class="title">{{movie.title}}</text>
   <view class="rate-container">
-    <l-rate score="2.5" size="22" disabled="{{true}}" />
-    <text class="score">2.5</text>
+    <l-rate score="{{movie.rating.stars/10}}" size="22" disabled="{{true}}" />
+    <text class="score">{{movie.rating.average}}</text>
   </view>
 
 </view>
