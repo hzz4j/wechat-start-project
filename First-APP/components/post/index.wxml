@@ -1,2 +1,1 @@
-<!--components/post/index.wxml-->
-<text>components/post/index.wxml</text>
+自定义组件{{text}}

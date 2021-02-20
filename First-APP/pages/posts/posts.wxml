@@ -12,7 +12,7 @@
       <image bind:tap="onJumpToDetail" data-post-id="4" src="/images/jumpfly.png"></image>
     </swiper-item>
   </swiper>
-
+  <post text="Hello Component" />
   <!-- 文章 -->
   <block wx:key="postId" wx:for="{{posts}}" wx:for-item="post" wx:for-index="idx">
     <!-- <template is="post-item" data="{{post}}"></template> -->
