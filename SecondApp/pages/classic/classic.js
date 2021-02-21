@@ -1,5 +1,6 @@
-import {HTTP} from '../../utils/http';
-const http = new HTTP();
+import {ClassicModel} from '../../model/classicModel';
+
+const model = new ClassicModel();
 
 Page({
 
@@ -14,13 +15,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-      http.request({
-        url: 'classic/latest',
-        success: res => {
-          console.log("111",res)
-        }
-      })
+    model.getRequest((res) => {
+      console.log(res)
+    })
   },
 
   /**
