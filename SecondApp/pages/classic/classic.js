@@ -1,5 +1,4 @@
 import {ClassicModel} from '../../model/classicModel';
-
 const model = new ClassicModel();
 
 Page({
@@ -8,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    classic: {}
   },
 
   /**
@@ -16,7 +15,10 @@ Page({
    */
   onLoad: function (options) {
     model.getRequest((res) => {
-      console.log(res)
+      console.log(res);
+      this.setData({
+        classic: res
+      })
     })
   },
 

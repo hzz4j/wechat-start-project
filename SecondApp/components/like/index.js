@@ -6,7 +6,11 @@ Component({
   properties: {
     isLike:{
       type: Boolean,
-      value: true
+      value: false
+    },
+    count:{
+      type: Number,
+      value: 0
     }
   },
 
