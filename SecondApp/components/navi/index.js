@@ -6,7 +6,7 @@ Component({
   properties: {
     title:String,
     first: Boolean,
-    last: Boolean
+    lastest: Boolean
   },
 
   /**

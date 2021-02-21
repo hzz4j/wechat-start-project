@@ -1,4 +1,12 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .header-container{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,9 +25,11 @@
     margin-top: 12rpx;
 }
 
-.navi-container{
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    margin-top: 150rpx;
+.movie{
+    width: 100%;
+}
+
+.navi{
+    position: absolute;
+    bottom: 60rpx;
 }

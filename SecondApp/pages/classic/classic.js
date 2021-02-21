@@ -8,7 +8,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    classic: {}
+    classic: {},
+    lastest: true,
+    first: false
   },
 
   /**
