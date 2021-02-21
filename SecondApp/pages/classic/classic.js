@@ -1,4 +1,6 @@
-// pages/classic/classic.js
+import {HTTP} from '../../utils/http';
+const http = new HTTP();
+
 Page({
 
   /**
@@ -12,14 +14,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      console.log("Hello World");
-      wx.request({
-        url: 'http://bl.talelin.com/v1/classic/latest',
-        data: {
-          appkey: 'AbhC31IG7ruCDp57'
-        },
+
+      http.request({
+        url: 'classic/latest',
         success: res => {
-          console.log(res)
+          console.log("111",res)
         }
       })
   },
