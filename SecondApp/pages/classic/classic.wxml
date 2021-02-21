@@ -1,3 +1,6 @@
-<v-like bind:onLike="onLike" isLike="{{classic.like_status}}" count="{{classic.fav_nums}}"/>
+<view class="header-container">
+    <v-epsoide class="epsoide" index="{{classic.index}}"></v-epsoide>
+    <v-like class="like" bind:onLike="onLike" isLike="{{classic.like_status}}" count="{{classic.fav_nums}}"/>
+</view>
 
 <v-movie image="{{classic.image}}" content="{{classic.content}}" />
