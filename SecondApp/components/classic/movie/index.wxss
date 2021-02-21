@@ -1,0 +1,24 @@
+.container{
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.classic-image{
+    width: 100%;
+    height: 500rpx;
+}
+
+.tag-image{
+    width: 42rpx;
+    height: 142rpx;
+    position:relative;
+    top: -65rpx;
+    left: -330rpx;
+}
+
+.content{
+    /* width: 550rpx; */
+    max-width: 550rpx;
+}
