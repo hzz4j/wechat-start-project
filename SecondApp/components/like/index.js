@@ -27,7 +27,12 @@ Component({
    */
   methods: {
     onLike(event){
-        console.log(event)
-      }
+      console.log(event)
+
+      const behavior = this.properties.isLike ? 'cancel':'like';
+      this.triggerEvent('onLike',{
+        behavior
+      })
+    }
   }
 })

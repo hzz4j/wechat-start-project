@@ -19,6 +19,5 @@
 }
 
 .content{
-    /* width: 550rpx; */
     max-width: 550rpx;
 }

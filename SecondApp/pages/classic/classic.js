@@ -1,6 +1,7 @@
-import {ClassicModel} from '../../model/classicModel';
-const model = new ClassicModel();
-
+import {ClassicModel} from '../../model/ClassicModel';
+import {LikeModel} from '../../model/LikeModel';  //'../../model/LikeModel';
+const classicModel = new ClassicModel();
+const likeModel = new LikeModel();
 Page({
 
   /**
@@ -14,7 +15,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    model.getRequest((res) => {
+    classicModel.getRequest((res) => {
       console.log(res);
       this.setData({
         classic: res
@@ -69,5 +70,14 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /**
+   * 处理用户点赞
+   */
+  onLike(event){
+    console.log(event);
+    const behavior = event.detail.behavior;
+    const { id,type} = this.data.classic;
+    likeModel.like(behavior,id,type);
   }
 })
