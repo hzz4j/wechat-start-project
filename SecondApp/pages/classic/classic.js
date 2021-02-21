@@ -12,7 +12,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+      console.log("Hello World");
+      wx.request({
+        url: 'http://bl.talelin.com/v1/classic/latest',
+        data: {
+          appkey: 'AbhC31IG7ruCDp57'
+        },
+        success: res => {
+          console.log(res)
+        }
+      })
   },
 
   /**
