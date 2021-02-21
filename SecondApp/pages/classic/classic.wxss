@@ -16,3 +16,10 @@
     margin-right: 30rpx;
     margin-top: 12rpx;
 }
+
+.navi-container{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 150rpx;
+}
