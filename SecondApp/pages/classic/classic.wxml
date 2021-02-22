@@ -9,7 +9,8 @@
         image="{{classic.image}}" content="{{classic.content}}" />
 
     <v-music class="movie" hidden="{{classic.type !== 200}}"
-        image="{{classic.image}}" content="{{classic.content}}" />
+        image="{{classic.image}}" content="{{classic.content}}" 
+        title="{{classic.title}}" src="{{classic.url}}"/>
 
     <v-essay class="movie" hidden="{{classic.type !== 300}}"
         image="{{classic.image}}" content="{{classic.content}}" />
