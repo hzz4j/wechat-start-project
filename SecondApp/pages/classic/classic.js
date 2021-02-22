@@ -9,7 +9,7 @@ Page({
    */
   data: {
     classic: {},
-    lastest: true,
+    latest: true,
     first: false
   },
 
@@ -83,12 +83,27 @@ Page({
     likeModel.like(behavior,id,type);
   },
   onNext(event){
-    console.log("on next")
-  },
-  onPrevious(event){
     const index = this.data.classic.index;
+    
+    classicModel.getNextRequest(index,res =>{
+      console.log(res);
+      this.setData({
+        classic:res,
+        first: classicModel.isFirst(res.index),
+        latest: classicModel.isLastest(res.index)
+      })
+    })
+  },
+
+  onPrevious(event){
+    const index = this.data.classic.index
     classicModel.getPreviousRequest(index,res => {
       console.log(res)
+      this.setData({
+        classic:res,
+        first: classicModel.isFirst(res.index),
+        latest: classicModel.isLastest(res.index)
+      })
     })
   }
 })
