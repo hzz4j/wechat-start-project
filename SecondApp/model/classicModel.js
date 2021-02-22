@@ -14,18 +14,14 @@ class ClassicModel extends HTTP{
         //  return  // 回调函数剥夺了return的能力
     }
 
-    getPreviousRequest(index,sCallback){
-        this.request({
-            url: `/classic/${index}/previous`,
-            success: res => {
-                sCallback && sCallback(res);
-            }
-        })
-    }
+    getClassicRequest(index,nextOrPrevious,sCallback){
+        const pathObj = {
+            "next":"next",
+            "previous":"previous"
+        }
 
-    getNextRequest(index,sCallback){
         this.request({
-            url: `/classic/${index}/next`,
+            url: `/classic/${index}/${pathObj[nextOrPrevious]}`,
             success: res => {
                 sCallback && sCallback(res);
             }
