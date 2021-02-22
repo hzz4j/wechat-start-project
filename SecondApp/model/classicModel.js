@@ -7,6 +7,7 @@ class ClassicModel extends HTTP{
             url: '/classic/latest',
             success: res => {
                 this._setLatestIndex(res.index)
+                wx.setStorageSync(this._getKey(res.index),res);
                 //  回调函数剥夺了return的能力
                 sCallback && sCallback(res)
             }
@@ -20,12 +21,25 @@ class ClassicModel extends HTTP{
             "previous":"previous"
         }
 
-        this.request({
-            url: `/classic/${index}/${pathObj[nextOrPrevious]}`,
-            success: res => {
-                sCallback && sCallback(res);
-            }
-        })
+        const key = nextOrPrevious==="next" ?
+                         this._getKey(index+1):this._getKey(index-1);
+
+        const classic = wx.getStorageSync(key);
+
+        if(!classic){   //  缓存中不存在则请求服务器
+            this.request({
+                url: `/classic/${index}/${pathObj[nextOrPrevious]}`,
+                success: res => {
+                    //  设置缓存
+                    wx.setStorageSync(this._getKey(res.index),res);
+                    sCallback && sCallback(res);
+                }
+            })
+        }else{
+            //  返回缓存中的数据
+            console.log("缓存命中");
+            sCallback && sCallback(classic);
+        }
     }
 
     isFirst(index){
@@ -41,6 +55,9 @@ class ClassicModel extends HTTP{
     }
     _getLatestIndex(index){
        return wx.getStorageSync(ClassicModel.LASEST_INDEX_KEY);
+    }
+    _getKey(index){
+        return "classic-"+index;
     }
 }
 
