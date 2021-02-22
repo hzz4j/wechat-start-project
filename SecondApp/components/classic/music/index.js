@@ -22,6 +22,7 @@ Component({
 
   attached(){
     this._restoreStatus();
+    this._monitorStatusChange();
   },
   /**
    * 组件的方法列表
@@ -47,6 +48,9 @@ Component({
     _restoreStatus(){
       console.log("paused->",audioMgr.paused)
       if(audioMgr.paused){
+        this.setData({
+          playing:false
+        })
         return;
       }
 
@@ -55,6 +59,12 @@ Component({
           playing:true
         })
       }
+    },
+    _monitorStatusChange(){
+      audioMgr.onPause(() => this._restoreStatus());
+      audioMgr.onStop(() => this._restoreStatus());
+      audioMgr.onEnded(() => this._restoreStatus());
+      audioMgr.onPlay(() => this._restoreStatus());
     }
   }
 })
