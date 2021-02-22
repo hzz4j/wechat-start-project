@@ -29,3 +29,17 @@
 .content{
     max-width: 580rpx;
 }
+
+.myrotation{
+    transform: rotate(360deg);
+    animation: myrotation 12s linear infinite;
+}
+
+@keyframes myrotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

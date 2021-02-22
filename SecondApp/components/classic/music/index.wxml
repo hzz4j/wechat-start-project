@@ -1,5 +1,5 @@
 <view hidden="{{hidden}}" class="container">
-    <image class="classic-image" src="{{image}}" />
+    <image class="classic-image {{playing? 'myrotation':''}}" src="{{image}}" />
     <view>
         <image class="player-img" src="{{playPlayerImg}}"
             hidden="{{playing}}"
