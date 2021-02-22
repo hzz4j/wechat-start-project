@@ -12,7 +12,7 @@ Component({
   data: {
     pausePlayerImg: "./images/player@pause.png",
     playPlayerImg: "./images/player@play.png",
-    musicTagImg: "./images/player@play.png"
+    musicTagImg: "./images/music@tag.png"
   },
 
   /**

@@ -19,6 +19,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    
     classicModel.getLatestRequest((res) => {
       console.log(res);
       const {fav_nums,like_status} = res;
