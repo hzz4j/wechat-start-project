@@ -1,5 +1,5 @@
 <view class="container">
-    <image src="{{musicBgImg}}" />
+    <image src="{{image}}" />
     <image src="{{playPlayerImg}}"/>
     <image src="{{musicTagImg}}"/>
     <text>{{content}}</text>

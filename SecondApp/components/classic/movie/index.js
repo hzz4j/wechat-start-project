@@ -1,12 +1,12 @@
-// components/classic/movie/index.js
+import {classcicBehavior} from '../classic-behavior';
+
 Component({
+
+  behaviors: [classcicBehavior],
   /**
    * 组件的属性列表
    */
-  properties: {
-    image:String,
-    content:String
-  },
+  properties: {},
 
   /**
    * 组件的初始数据

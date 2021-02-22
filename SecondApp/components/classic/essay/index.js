@@ -10,9 +10,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    pausePlayerImg: "./images/player@pause.png",
-    playPlayerImg: "./images/player@play.png",
-    musicTagImg: "./images/player@play.png"
+
   },
 
   /**
