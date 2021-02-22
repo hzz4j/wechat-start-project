@@ -7,7 +7,8 @@
     
     <v-movie class="movie" image="{{classic.image}}" content="{{classic.content}}" />
     
-    <v-navi class="navi" title="{{classic.title}}" first="{{first}}" lastest="{{lastest}}"/>
+    <v-navi class="navi" title="{{classic.title}}" first="{{first}}" lastest="{{lastest}}"
+        bind:left="onNext" bind:right="onPrevious"/>
 </view>
 
 

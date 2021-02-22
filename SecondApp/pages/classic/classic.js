@@ -81,5 +81,11 @@ Page({
     const behavior = event.detail.behavior;
     const { id,type} = this.data.classic;
     likeModel.like(behavior,id,type);
+  },
+  onNext(event){
+    console.log("on next")
+  },
+  onPrevious(event){
+    console.log("on previous")
   }
 })
