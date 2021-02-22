@@ -23,7 +23,7 @@ class ClassicModel extends HTTP{
 
         const key = nextOrPrevious==="next" ?
                          this._getKey(index+1):this._getKey(index-1);
-
+        //  获取缓存中的数据
         const classic = wx.getStorageSync(key);
 
         if(!classic){   //  缓存中不存在则请求服务器
@@ -46,7 +46,6 @@ class ClassicModel extends HTTP{
         return index === 1;
     }
     isLastest(index){
-        console.log(index,"<====>",this._getLatestIndex())
         return index === this._getLatestIndex();
     }
 
