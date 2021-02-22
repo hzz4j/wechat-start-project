@@ -17,7 +17,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    classicModel.getRequest((res) => {
+    classicModel.getLatestRequest((res) => {
       console.log(res);
       this.setData({
         classic: res
@@ -86,6 +86,9 @@ Page({
     console.log("on next")
   },
   onPrevious(event){
-    console.log("on previous")
+    const index = this.data.classic.index;
+    classicModel.getPreviousRequest(index,res => {
+      console.log(res)
+    })
   }
 })
