@@ -20,6 +20,9 @@ Component({
     playing: false
   },
 
+  attached(){
+    this._restoreStatus();
+  },
   /**
    * 组件的方法列表
    */
@@ -39,6 +42,19 @@ Component({
         playing: false
       })
       audioMgr.pause();
+    },
+
+    _restoreStatus(){
+      console.log("paused->",audioMgr.paused)
+      if(audioMgr.paused){
+        return;
+      }
+
+      if(audioMgr.src === this.properties.src){
+        this.setData({
+          playing:true
+        })
+      }
     }
   }
 })

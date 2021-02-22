@@ -8,7 +8,7 @@
     <v-movie class="movie" hidden="{{classic.type !== 100}}"
         image="{{classic.image}}" content="{{classic.content}}" />
 
-    <v-music class="movie" hidden="{{classic.type !== 200}}"
+    <v-music class="movie" wx:if="{{classic.type == 200}}"
         image="{{classic.image}}" content="{{classic.content}}" 
         title="{{classic.title}}" src="{{classic.url}}"/>
 
